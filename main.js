@@ -158,9 +158,11 @@ const totalCarrito = () => {
 
     if (carrito.length > 0) {
         document.querySelector(".carritoVacio").classList.add("oculto");
+        document.querySelector("#btnTotal").classList.remove("oculto");
     }
     else {
         document.querySelector(".carritoVacio").classList.remove("oculto");
+        document.querySelector("#btnTotal").classList.add("oculto");
     }
 }
 

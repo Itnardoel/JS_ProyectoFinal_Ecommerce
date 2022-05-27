@@ -133,6 +133,10 @@ td p {
     display: none;
 }
 
+#btnTotal.oculto {
+    display: none;
+}
+
 .carritoModalOverlay {
     position: fixed;
     width: 100vw;
