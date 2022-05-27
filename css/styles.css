@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo img{
+    width: 100px;
+    max-height: auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+header {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.banner img {
+    width: 100%;
+    max-height: 100%; 
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card img {
+    width: 70%;
+    height: auto;
+}
+
+#carrito img {
+    width: 100px;
+    height: auto;
+}
+
+#carrito {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+td p {
+    max-width: 200px
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+#total {
+    text-align: center;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.btnCarrito {
+    cursor: pointer;
+}
+
+.carritoVacio {
+    text-align: center;
+}
+
+.carritoVacio.oculto {
+    display: none;
+}
+
+.carritoModalOverlay {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: .7s ease-out;
+}
+
+.carritoModalOverlay.mostrar {
+    transform: translateX(0%);
+}
+
+.carritoModal {
+    height: 100vh;
+    width: 50%;
+    background-color: rgb(231, 230, 230);
+    float: right;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-top: 1rem;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.footer h2 {
+    text-align: center;
+    padding: 1rem;
+}
+
+.redesSociales {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    padding: 1rem;
+}
+
+.redesSociales svg {
+    width: 50px;
+    height: 50px;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter input {
+    margin: 0.5rem;
+    padding: 5px;
+}
+
+.newsletter button {
+    margin: 0.5rem;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: rgb(255, 0, 0);
+    display: none;
+}
+
+.error.verdadero {
+    display: block;
+}

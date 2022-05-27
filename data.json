@@ -1,0 +1,11 @@
+[
+    {"id": 1, "nombre": "Persona 5 Royal", "precio": 8000, "imagen": "./img/persona-5-royal.jpg", "cantidad": 1},
+    {"id": 2, "nombre": "Chrono Cross - The Radical Dreamers Edition", "precio": 9500, "imagen": "./img/chrono-cross.jpg", "cantidad": 1},
+    {"id": 3, "nombre": "Xenoblade Chronicles 2", "precio": 9800, "imagen": "./img/xenoblade-chronicles-2.jpg", "cantidad": 1},
+    {"id": 4, "nombre": "Hollow Knight", "precio": 5600, "imagen": "./img/hollow-knight.jpg", "cantidad": 1},
+    {"id": 5, "nombre": "Tales of Arise", "precio": 7790, "imagen": "./img/box-art-tales-of-arise-portada-playstation-4-japon.jpg", "cantidad": 1},
+    {"id": 6, "nombre": "Fire Emblem Three Houses", "precio": 8540, "imagen": "./img/fire-emblem_three-houses_portada.jpg", "cantidad": 1},
+    {"id": 7, "nombre": "Devil May Cry 5 - Special Edition", "precio": 9452, "imagen": "./img/devil_may_cry_ps5.jpg", "cantidad": 1},
+    {"id": 8, "nombre": "Tokyo Mirage Sessions #FE Encore", "precio": 8253, "imagen": "./img/81KECtiGbtL._SY500_.jpg", "cantidad": 1},
+    {"id": 9, "nombre": "Octopath Traveler", "precio": 9367, "imagen": "./img/octopath-traveler-switch-cover.jpg", "cantidad": 1}
+]
