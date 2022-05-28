@@ -13,7 +13,6 @@ class Usuario {
 ***************/
 //Array con todos mis productos
 const productos = [];
-const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 //Array para el carrito
 let carrito = [];
@@ -263,8 +262,14 @@ const nuevoUsuario = () => {
     let valido = validarUsuario (nombre, email);
     
     if (valido == 0) {
-        usuarios.push(usuario);
-        localStorage.setItem("Usuarios", JSON.stringify(usuarios));
+        Swal.fire(
+            `Gracias por suscribirte ${nombre}`,
+            'Vas a estar recibiendo un email con todas nuestras novedades',
+            'success'
+          )
+        let usuarioStorage = JSON.parse(localStorage.getItem("Usuarios")) || []
+        usuarioStorage.push(usuario);
+        localStorage.setItem("Usuarios", JSON.stringify(usuarioStorage));
         document.querySelector("#nombre").value = "";
         document.querySelector("#email").value = "";
     }
