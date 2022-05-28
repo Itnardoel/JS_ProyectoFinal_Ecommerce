@@ -28,6 +28,7 @@ const btnCarrito = document.querySelector(".btnCarrito");
 const carritoOverlay = document.querySelector(".carritoModalOverlay");
 const cantidadCarrito = document.querySelector(".cantidadCarrito");
 const btnSuscribirse = document.querySelector("#btnSuscribirse");
+const btnVaciarCarrito = document.querySelector("#btnVaciarCarrito");
 
 /*************
     Funciones  
@@ -158,10 +159,12 @@ const totalCarrito = () => {
 
     if (carrito.length > 0) {
         document.querySelector(".carritoVacio").classList.add("oculto");
+        document.querySelector("#btnVaciarCarrito").classList.remove("oculto");
         document.querySelector("#btnTotal").classList.remove("oculto");
     }
     else {
         document.querySelector(".carritoVacio").classList.remove("oculto");
+        document.querySelector("#btnVaciarCarrito").classList.add("oculto");
         document.querySelector("#btnTotal").classList.add("oculto");
     }
 }
@@ -169,7 +172,6 @@ const totalCarrito = () => {
 // Funcion para guardar la cantidad del carrito y modificarla en el storage
 const guardarCantidad = (cantidadProducto, posicion) => {
     carrito[posicion].cantidad = cantidadProducto;
-    console.log(carrito);
     let carritoStorage = JSON.parse(localStorage.getItem("Carrito"));
     carritoStorage = carrito;
     localStorage.setItem("Carrito", JSON.stringify(carritoStorage));
@@ -212,9 +214,13 @@ const borrarDelCarrito = (id) => {
 function cambiarCantidad (e) {;
     let cantidad = e.target.value;
     
-    if (isNaN(cantidad) || cantidad <= 0) {
+    if (isNaN(cantidad) || cantidad < 1) {
         e.target.value = 1;
     }
+    if (cantidad % 1 != 0) {
+        e.target.value = Math.floor(e.target.value);
+    }
+    
     totalCarrito();
 }
 
@@ -287,6 +293,19 @@ const validarUsuario = (nombre,email) => {
     return numValido;
 }
 
+// Para vaciar el carrito entero
+const vaciarCarrito = () => {
+    let padre = document.getElementById("carrito");
+    while (padre.firstChild) {
+        padre.removeChild(padre.firstChild);
+    }
+    let carritoStorage = JSON.parse(localStorage.getItem("Carrito"));
+    carrito = [];
+    carritoStorage = carrito;
+    localStorage.setItem("Carrito", JSON.stringify(carritoStorage));
+    totalCarrito();
+}
+
 /***********
     Eventos
 ************/
@@ -326,3 +345,6 @@ carritoOverlay.addEventListener("click", (e) => {
 
 // Evento del boton de la Newsletter
 btnSuscribirse.addEventListener("click", nuevoUsuario);
+
+// Evento para vaciar el carrito
+btnVaciarCarrito.addEventListener("click", vaciarCarrito);

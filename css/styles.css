@@ -133,7 +133,24 @@ td p {
     display: none;
 }
 
+.cantidadProducto {
+    width: 40px;
+}
+
+td p {
+    width: 180px;
+    text-align: center;
+}
+
+#btnTotal {
+    margin-bottom: 180px;
+}
+
 #btnTotal.oculto {
+    display: none;
+}
+
+#btnVaciarCarrito.oculto {
     display: none;
 }
 
@@ -155,7 +172,7 @@ td p {
     width: 50%;
     background-color: rgb(231, 230, 230);
     float: right;
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden;
     padding-top: 1rem;
 }
